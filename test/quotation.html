@@ -1,0 +1,346 @@
+<html><style type="text/css" id="night-mode-pro-style">html {background-color: #FFFFFF !important;} body {background-color: #FFFFFF;}</style><link type="text/css" rel="stylesheet" id="night-mode-pro-link"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<!-- Normalize or reset CSS with your favorite library -->
+	<link rel="stylesheet" href="http://www.bottle.com.hk/css/normalize/7.0.0/normalize.min.css">
+	<!-- Load paper.css for happy printing -->
+	<link rel="stylesheet" href="http://www.bottle.com.hk/css/paper-css/0.4.1/paper.css">
+	<style>
+		@page {size: A4; margin:0; padding:0;}
+			@font-face {
+					font-family: "NotoSansTC";
+					src: url("http://www.bottle.com.hk/node0811/test/font/NotoSansTC-Regular.otf") format("opentype");
+			}
+			html{transform-origin: 0 0; -webkit-transform-origin: 0 0; transform: scale(0.75); -webkit-transform: scale(0.75);}
+			.sheet{font-size: 10px; font-family: NotoSansTC, Arial, Helvetica, sans-serif;}
+			.sheet .page-header + .page-header{padding-left: 15mm;}
+			.sheet .page-header.half div {float:left; min-height:2px;}
+			.sheet .page-header .end{text-align: right;}
+			.sheet .page-header .vip{white-space: nowrap;}
+			.sheet .page-header ul li div.title:first-child{width: 14.67%;}
+			.sheet .half{width: 130.5mm;display: block;float: left;}
+			.sheet .half + .half {padding-left: 15mm;}
+			.sheet .invoice-title{text-align: center;text-decoration: underline;}
+			.sheet .space{height: 10px;}
+			.sheet .bold{font-weight: bold;}
+			.sheet .number{text-align: right;}
+			.sheet ul li{list-style-type: none;width: 100%; float: left;}
+			.sheet div {border-spacing: 0;}
+			.sheet div th{font-weight: normal; text-align: left;}
+			.sheet div th.number{text-align: right;}
+			.page-num {position: absolute; bottom: 19mm;}
+	
+			.sheet .h_left {float: left;width: 64%;min-width: 64%;max-width: 64%;overflow: hidden;}
+			.sheet .h_right {float: left;text-align: right;width: 36%;min-width: 36%;max-width: 36%;overflow: hidden;}
+			.sheet .h_left .h_title {color:#003882;margin-top: -.5rem;}
+			.sheet .h_right .h_logo {height: 51px; padding-right: 1rem;}
+			.sheet .h_left .h_box {border: 1px solid #000;padding: .6rem .3rem;margin-top: .1rem;margin-bottom: .1rem;}
+			.sheet .h_left .h_box span {line-height: 1.15rem;}
+			.sheet .h_txt {/*display: flex;*/ flex-direction: column;}
+			.sheet .h_txt > div {/*display: flex;*/ align-items: center;}
+			.sheet .hh_left .h_txt {flex-direction: row;}
+			.sheet .h_txt span.title{color:#003882;font-size: .9rem;}
+			.sheet .h_right .h_txt span{line-height: 1.4rem;float: left;}
+			.sheet .h_right .h_txt span.title{font-size: .87rem;}
+			.sheet .h_txt span.title:nth-child(1){width: 74%;padding-right: .5rem;box-sizing: border-box;}
+			.sheet .hh_left .h_txt span.title:nth-child(1){width: 41.5mm; padding-left: .7rem; display: inline-block;}
+			.sheet .h_left .h_txt span.title:nth-child(1){width: 41.5mm;padding-left: .7rem;display: inline-block;}
+			.sheet .h_txt span + span.title{padding-left: 1.1rem;line-height: .6;}
+			.sheet .h_txt span + span.title + span{padding-left: 1.1rem;}
+			.sheet .h_txt span:nth-child(1){padding-left: 0;}
+			.sheet .h_txt span + span{font-size: .75rem;line-height: .3rem;}
+			.sheet .h_right .h_txt span + span{width: 26%;overflow: hidden;white-space: nowrap;text-align: left;}
+	
+			.prim-color {color:#003882;}
+	
+			.title{color:#003882; font-size: .95rem;}
+			.h1{font-size: 2.5rem !important;line-height: 3.4rem;}
+			.h2{font-size: 1.58rem !important;}
+			.bt1{font-size: 1rem !important;}
+			.bt2{font-size: .9rem !important;}
+			.bt3{font-size: .8rem !important;}
+			.bt4{font-size: .7rem !important;}
+			.bt5{font-size: .6rem !important;}
+			.bold{font-weight: bold !important;}
+			.text-center{text-align: center;}
+			.text-right{text-align: right;}
+			.dis-flex{/*display: flex;*/}
+			.flex-1{/* flex: 1; */}
+	
+			.table {margin-top: .7rem;}
+	
+			.table .head {
+			display: inline-block;
+			}
+	
+			.table .head .col {
+					color:#003882;
+					font-size: .9rem;
+			}
+	
+			.table .col:nth-child(1) {
+					width: 11mm;
+					min-height: 2px;
+					text-indent: .6rem;
+			}
+	
+			.table .col:nth-child(2) {
+					width: 20mm;
+			}
+	
+			.table .col:nth-child(3) {
+					width: 67mm;
+			}
+	
+			.table .col:nth-child(4) {
+					width: 22mm;
+					text-align: right;
+			}
+	
+			.table .col:nth-child(5) {
+					width: 18mm;
+					text-align: right;
+			}
+	
+			.table .col:nth-child(6) {
+					width: 24mm;
+					text-align: right;
+			}
+	
+			.table .col:nth-child(7) {width: 23mm; text-align: right;}
+	
+			.table .list {border: 1px solid #000;margin-top: .4rem;min-height: 26.4rem;}
+	
+			.table .row_wrap {padding-top: .4rem;}
+	
+			.table .row_wrap .row {display: inline-block;}
+	
+			.sheet .footer .h_txt{border: 1px solid #000;border-top: 0;padding: .1rem .2rem .95rem .7rem;}
+			.sheet .footer .h_txt:nth-child(2){padding: .1rem .2rem .6rem .7rem;}
+			.hh_left {
+				display: inline;
+			}
+	
+			.sheet .h_txt span {
+				line-height: 1.5;
+			}
+	
+			.table .col {
+				float: left;
+				min-height: 2px;
+			}
+			
+			.float-left {
+				float: left;
+			}
+			.signature {
+				padding: .6rem 1.5rem 0 2rem;
+				font-size: .75rem;
+			}
+			.signature .float-left{
+				width: 33.333%;
+			}
+	
+			.signature .float-left:nth-child(1) {width: 32%;}
+	
+			.signature .float-left:nth-child(2) {width: 37%;}
+	
+			.signature .float-left:nth-child(3) {width: 31%;}
+	</style>
+	</head>
+	<body class="A4">
+	<div class="sheet padding-10mm">
+		<div class="sheet lastContainer" style="
+				background: #fff url(http://www.bottle.com.hk/data/quotation.jpg) no-repeat center;
+				background-size: 98%;
+				width: 100%;
+				height: 100%;
+				opacity: .2;
+				visibility: visible;
+				position: absolute;
+				left: 0;
+				top: 0;
+				margin: 0;
+				pointer-events: none;
+				display: none;
+			"></div>
+		<div style="overflow:hidden;">
+			<div class="h_left">
+				<div class="h1 h_title prim-color">QUOTATION 報價</div>
+				<div class="h_box">
+					<div>
+						<div><span class="bt3"><b>新華行(香港)有限公司</b></span></div>
+					</div>
+					<div>
+						<div><span class="bt3"><b>SUN WAH HONG (HK) COMPANY LIMITED</b></span></div>
+					</div>
+					<div>
+						<div><span class="bt4">Flat B, 9/F., Phase 1, Hung Cheung Ind. Cdiv., 12 Tsing Yeung Circuit, Tuen Mun, N.T.</span></div>
+					</div>
+					<div>
+						<div><span class="bt4">Tel: +852 2455-9633　Fax: +852 2906-9611　E-mail: info@hkclean.hk</span></div>
+					</div>
+				</div>
+				<div class="h_txt">
+					<div><span class="title">COMPANY 公司名稱</span><span>Chungming Group Company Limited</span></div>
+					<div><span class="title">ADDRESS 送貨地址</span><span></span></div>
+					<div><span class="title">CLIENT 聯絡人</span><span>Mr. Chan </span></div>
+				</div>
+			</div>
+			<div class="h_right">
+				<img class="h_logo" src="http://bottle.com.hk/images/upload/Image/logo.JPG">
+				<div class="h_txt" style="padding-top: 5.7mm;">
+					<div><span class="title">QUOTATION 報價#</span><span>20190326</span></div>
+					<div><span class="title">DATE 日期</span><span>2020/02/01</span></div>
+					<div><span class="title">SALESPERSON 營業員</span><span>Ms. Renee Ng</span></div>
+					<div><span class="title">PAYMENT TERMS 付款條件</span><span>先支付全數</span></div>
+					<div><span class="title">DELIVERY TIME 送貨日期</span><span>確認訂單後 2月尾</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="hh_left">
+			<div class="h_txt">
+				<div>
+					<span class="title">CONTACT NO. 電話</span><span>60162648</span>
+					<span class="title">FAX 傳真</span><span>--</span>
+					<span class="title">EMAIL 電郵</span><span>gracialex@yahoo.com.hk</span>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div>
+				<div>
+					<div>
+						<div>
+							<div class="table">
+								<div class="head">
+									<div class="col"></div>
+									<div class="col">ITEM#</div>
+									<div class="col">DESCRIPTION</div>
+									<div class="col">UNIT PRICE</div>
+									<div class="col">QTY</div>
+									<div class="col">DISCOUNT</div>
+									<div class="col">AMOUNT</div>
+								</div>
+								<div class="list">
+																	<div class="row_wrap bt3">
+										<div class="row">
+											<div class="col">
+												1										</div>
+											<div class="col">
+												PB-53										</div>
+											<div class="col">
+												500ml萬用噴壼 清潔劑噴瓶										</div>
+											<div class="col">9.80</div>
+											<div class="col">
+												300																					</div>
+											<div class="col">
+																						</div>
+											<div class="col">2,940.00</div>
+										</div>
+										<div class="row">
+											<div class="col"></div>
+											<div class="col">
+																							<img style="width:70px;height:70px;" src="http://bottle.com.hk/images/201912/thumb_img/1310_thumb_P_1576697932711.jpg">
+																						</div>
+											<div class="col">
+																						</div>
+											<div class="col" style="padding-top:8px;">
+																						</div>
+										</div>
+									</div>
+																</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+				<div style="display: none; border:1px solid #000;border-top:0; padding: 0.5rem 1rem;">
+			<div>
+				<div>
+					<div>客戶留言:</div>
+					<div>Please send the quotation or contact as above information, thanks</div>
+				</div>
+			</div>
+		</div>
+						<div class="footer">
+			<div class="h_txt">
+				<div class="dis-flex" style=" align-items: normal; ">
+					<div class="float-left">
+						<span class="title">QUOTE EFFECTIVE DAYS 有效日</span>
+						<span class="bt2">60 days</span>
+					</div>
+					<div class="flex-1 text-right" style="padding-right: 3.5rem;margin-top: .2rem;"><span class="h2 prim-color">HKD $2,940.00</span></div>
+				</div>
+				<div style="flex-direction: column; ">
+					<div style="padding: 0 2rem 0 2rem;">
+						<div>
+							<span class="title">REMARK 備註</span>
+							<span class="bt4">**所有提供之產品參數僅供參考** 如買方確認訂單後取消，本公司將會收取銷售金額之30%作為行政費用途。</span>
+						</div>
+					</div>
+					<div class="bt4" style="padding: .8rem 2rem 0 2rem;">
+						<div>
+							<span class="title">DELIVERY 運送安排</span>
+							<span class="bt4">金額滿$1000包送貨。只限一個地點及同一樓層，送貨大廈要有停車䐢)，不包括赤柱、西貢、禁區、離
+								島、半山、唐樓及安排上船之費用。 如額外送多一點或沒有升降機或電梯不能直達的樓宇; 或需上落樓梯/大斜坡等, 需另加收費。</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="h_txt">
+				<div class="dis-flex text-center" style="flex-direction: column;">
+					<div style=" padding-top: .5rem; ">
+						<span class="title">PAYMENT METHOD 付款方式</span>
+					</div>
+					<div class="flex-1 text-center bt3" style="padding-top: .5rem;">
+						<div>1. FPS 轉數快 FPS識別碼:9326687</div>
+						<div>2. BANK-IN/TRANSFER 入數/支票/轉䵷 Dah Sing Bank大新銀行 Sun Wah Hong (Hong Kong) Company Limited</div>
+						<div>ACC# 040-756-328-03826</div>
+					</div>
+				</div>
+			</div>
+			<div class="signature">
+				<div class="dis-flex">
+					<div class="float-left">For &amp; On Behalf of<br>
+					Chungming Group Company Limited</div>
+					<div class="float-left">&nbsp;</div>
+					<div class="float-left">For &amp; On Behalf of<br>
+					新華行(香港)有限公司</div>
+				</div>
+				<div class="dis-flex">
+					<div class="float-left">
+						<p><span>&nbsp;</span></p>
+						<p><span>&nbsp;</span></p>
+					</div>
+					<div class="float-left">&nbsp;</div>
+					<div class="float-left">
+						<div>
+							<div>
+								<div style="height: 6.4rem;position: relative;"> 
+																		<img src="http://bottle.com.hk/data/signature/19.png" style="width: 75px; position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto 0;">
+																										<img src="http://bottle.com.hk/images/swh_watermark.png" style=" width: 100px; position: absolute;top: 0;bottom: 0;left: 75px;right: 0;margin: auto 0;">
+																</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dis-flex">
+					<div class="float-left">
+						<div style="border-top-style:solid;border-top-width:1px;padding-top: 1px;"><strong style="font-size:9pt">Authorized Signature &amp; Co., Chop</strong></div>
+					</div>
+					<div class="float-left">&nbsp;</div>
+					<div class="float-left">
+						<div style="border-top-style:solid;border-top-width:1px;padding-top: 1px;"><strong style="font-size:9pt">Authorized Signature &amp; Co., Chop</strong></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- Catalog -->
+	
+	
+	
+	</body></html>
