@@ -4,6 +4,7 @@
   "description": "gen pdf",
   "main": "app.js",
   "scripts": {
+    "start": "export OPENSSL_CONF=/etc/ssl && node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -15,6 +16,10 @@
     }
   ],
   "dependencies": {
-    "html-pdf": "^2.2.0"
+    "axios": "^1.7.7",
+    "basic-ftp": "^5.0.5",
+    "ftp": "^0.3.10",
+    "html-pdf": "^2.2.0",
+    "puppeteer": "^23.8.0"
   }
 }

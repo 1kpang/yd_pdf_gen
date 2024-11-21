@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  yd-pdf-gen:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: yd-pdf-gen
+    ports:
+      - "8020:3000"  # Map port 8020 of the container to port 3000 on the host
+    volumes:
+      - yd-pdf-gen-data:/usr/src/app  # Mount the current directory to the working directory in the container
+    environment:
+      - NODE_ENV=production
+      - PORT=3000       # Set the PORT environment variable
